@@ -1,0 +1,37 @@
+{
+  "name": "vexel",
+  "displayName": "Vexel",
+  "description": "Vexel language support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onLanguage:vexel"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "vexel",
+        "aliases": [
+          "Vexel"
+        ],
+        "extensions": [
+          ".vx"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vexel",
+        "scopeName": "source.vexel",
+        "path": "./syntaxes/vexel.tmLanguage.json"
+      }
+    ]
+  }
+}
