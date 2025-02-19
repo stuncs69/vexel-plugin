@@ -171,6 +171,11 @@ function activate(context) {
             detail: "Converts an array to a concatenated string",
             insertText: "array_to_string(${1:array})",
           },
+          {
+            name: "array_range",
+            detail: "Generates an array of numbers, useful for loops",
+            insertText: "array_range(${1:count})",
+          },
         ];
 
         coreFunctions.forEach((func) => {

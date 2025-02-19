@@ -1,56 +1,67 @@
 {
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "scopeName": "source.vexel",
-    "name": "Vexel",
-    "patterns": [
-      {
-        "match": "\\bset\\b",
-        "name": "keyword.control.vexel"
-      },
-      {
-        "match": "\\bfunction\\b",
-        "name": "keyword.control.function.vexel"
-      },
-      {
-        "match": "\\b(start|end)\\b",
-        "name": "keyword.control.block.vexel"
-      },
-      {
-        "match": "\\bprint\\b",
-        "name": "keyword.command.print.vexel"
-      },
-      {
-        "match": "\\b(if|else)\\b",
-        "name": "keyword.control.conditional.vexel"
-      },
-      {
-        "match": "\\b(true|false)\\b",
-        "name": "constant.language.boolean.vexel"
-      },
-      {
-        "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\s*=)",
-        "name": "variable.other.vexel"
-      },
-      {
-        "match": "\".*?\"",
-        "name": "string.quoted.double.vexel"
-      },
-      {
-        "match": "\\d+",
-        "name": "constant.numeric.vexel"
-      },
-      {
-        "match": "\\bfunction\\s+([A-Za-z_][A-Za-z0-9_]*)",
-        "captures": {
-          "1": {
-            "name": "entity.name.function.vexel"
-          }
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.vexel",
+  "name": "Vexel",
+  "patterns": [
+    {
+      "match": "\\bset\\b",
+      "name": "keyword.control.vexel"
+    },
+    {
+      "match": "\\bset\\s+([A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "entity.name.class"
         }
-      },
-      {
-        "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
-        "name": "support.function.call.vexel"
       }
-    ]
-  }
-  
+    },
+    {
+      "match": "\\bfunction\\b",
+      "name": "keyword.control.function.vexel"
+    },
+    {
+      "match": "\\b(start|end)\\b",
+      "name": "keyword.control.block.vexel"
+    },
+    {
+      "match": "\\bprint\\b",
+      "name": "keyword.command.print.vexel"
+    },
+    {
+      "match": "\\b(if|else)\\b",
+      "name": "keyword.control.conditional.vexel"
+    },
+    {
+      "match": "\\b(true|false)\\b",
+      "name": "constant.language.boolean.vexel"
+    },
+    {
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\s*=)",
+      "name": "variable.other.vexel"
+    },
+    {
+      "match": "\".*?\"",
+      "name": "string.quoted.double.vexel"
+    },
+    {
+      "match": "\\d+",
+      "name": "constant.numeric.vexel"
+    },
+    {
+      "match": "\\bfunction\\s+([A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "entity.name.function.vexel"
+        }
+      }
+    },
+    {
+      "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
+      "name": "support.function.call.vexel"
+    },
+    {
+      "match": "\\b(for|while|in)\\b",
+      "name": "keyword.control.loop.vexel"
+    }
+  ]
+}
