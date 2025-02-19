@@ -3,7 +3,7 @@
   "displayName": "Vexel",
   "publisher": "stuncs69",
   "description": "Vexel language support",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/stuncs69/vexel-plugin",
   "engines": {
     "vscode": "^1.97.2"
